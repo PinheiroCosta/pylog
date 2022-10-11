@@ -16,7 +16,7 @@ if __name__ == "__main__":
         core.stop()
 
     except Exception as e:
-        log.info(f"Erro desconhecido ({e}).")
+        log.error(f"Erro desconhecido ({e}).")
 
     else:
         log.info("Programa parado com sucesso.")

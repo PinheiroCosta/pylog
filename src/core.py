@@ -17,14 +17,14 @@ class CreateCore:
         try:
             self.database.start()
         except Exception as e:
-            log.info(f"Erro ao tentar conectar na base de dados [{e}]")
+            log.error(f"Erro ao tentar conectar na base de dados [{e}]")
         else:
             log.info("Conectado na base de dados!")
 
         try:
             self.webserver.start()
         except Exception as e:
-            log.info(f"Erro ao tentar conectar no servidor [{e}]")
+            log.error(f"Erro ao tentar conectar no servidor [{e}]")
         else:
             log.info("Conexão estabelecida com o servidor!")
 
