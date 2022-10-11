@@ -1,12 +1,16 @@
-from conf.log_conf import log
+import logging
 
 
 class CreateWebserver:
+    def __init__(self):
+        self.log = logging.getLogger("Webserver")
+
     def start(self):
-        log.info(f"Conectando ao servidor...")
-        log.info(f"Aguardando disponibilidade da porta...")
+        self.log.info(f"Conectando ao servidor...")
+        self.log.info(f"Aguardando disponibilidade da porta...")
+        self.log.info(f"Conexão estabelecida!")
 
     def stop(self):
-        log.info(f"Desconectando do servidor...")
-        log.info(f"Fechando a porta antes de sair...")
-        log.info(f"Desconectado!")
+        self.log.info(f"Desconectando do servidor...")
+        self.log.info(f"Fechando a porta antes de sair...")
+        self.log.info(f"Desconectado!")

@@ -1,5 +1,4 @@
 import logging
-from logging import INFO
 from rich.logging import RichHandler
 
 
@@ -47,7 +46,12 @@ else:
 
 color_handler.setFormatter(CustomFormatter())
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+logging.basicConfig(
+        filename='log/output.log',
+        filemode='a',
+        format='%(asctime)s|%(module)s|%(levelname)s|%(message)s',
+        datefmt='%x %X')
 
-log = logging.getLogger('rich')
+log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 log.addHandler(color_handler)
