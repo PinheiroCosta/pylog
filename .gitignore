@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Custom
+__*__.py
+*.log
+*.pyc
+*.class
+*.lock
+*.tmp
+*.swp
+bkp/*
