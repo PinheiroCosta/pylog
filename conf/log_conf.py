@@ -6,15 +6,13 @@ from rich.logging import RichHandler
 class CustomFormatter(logging.Formatter):
 
     # Formatting Configuration
-    MODULE_FMT = "[yellow]\[%(module)-10s][/]"
+    MODULE_FMT = "[yellow]%(module)+10s[/] "
 
     INFO_FMT = "%(levelname)-8s▶"
-    DEBUG_FMT = "[black on white]%(levelname)-8s[/]▶"
+    DEBUG_FMT = "[black on white]%(levelname)s[/]▶"
     WARNING_FMT = "[black on yellow]%(levelname)-8s[/][yellow]▶[/yellow]"
     ERROR_FMT = "[black on red]%(levelname)-8s[/][red]▶[/red]"
     CRITICAL_FMT = "[black on purple]%(levelname)-8s[/][purple]▶[/purple]"
-
-    DATEFORMAT = "[%X]"
 
     FORMATS = {
         logging.DEBUG: f"{MODULE_FMT}{DEBUG_FMT} %(message)s",
@@ -31,7 +29,7 @@ class CustomFormatter(logging.Formatter):
 
 
 DEBUGGER = 0
-# Color
+# Load Colors
 if DEBUGGER:
     color_handler = RichHandler(
             log_time_format="[%X]",
