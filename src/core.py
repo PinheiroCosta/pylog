@@ -19,7 +19,7 @@ class CreateCore:
             self.database.start()
         except Exception as error:
             self.log.error(
-                    f"Erro ao tentar conectar na base de dados [{error}]",
+                    f"Erro ao tentar conectar na base de dados ({error})",
                     exc_info=True)
 
             exit(1)
@@ -32,7 +32,7 @@ class CreateCore:
             self.webserver.start()
         except Exception as error:
             self.log.error(
-                    f"Erro ao tentar conectar no servidor [{error}]",
+                    f"Erro ao tentar conectar no servidor ({error})",
                     exc_info=True)
             exit(1)
 
