@@ -30,6 +30,7 @@ class CreateCore:
         self.log.info(f"Preparando conexao com o Webserver...")
         try:
             self.webserver.start()
+
         except Exception as error:
             self.log.error(
                     f"Erro ao tentar conectar no servidor ({error})",
