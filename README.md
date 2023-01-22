@@ -1,2 +1,2 @@
 # pylog
-a python log tool
+easy logger tool
