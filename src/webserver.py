@@ -14,3 +14,4 @@ class CreateWebserver:
         self.log.info(f"Desconectando do servidor...")
         self.log.info(f"Fechando a porta antes de sair...")
         self.log.info(f"Desconectado!")
+        self.log.info(f"Olá")
